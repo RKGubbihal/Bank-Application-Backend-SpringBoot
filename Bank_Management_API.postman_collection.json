@@ -1,0 +1,97 @@
+{
+  "info": {
+    "name": "Bank Management API",
+    "description": "Collection for testing Bank Management System APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Account",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"accountHolderName\": \"John Doe\",\n  \"accountBalance\": 5000.0\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/account/create",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["account", "create"]
+        }
+      }
+    },
+    {
+      "name": "Get Account by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/account/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["account", "1"]
+        }
+      }
+    },
+    {
+      "name": "Get All Accounts",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/account/all",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["account", "all"]
+        }
+      }
+    },
+    {
+      "name": "Deposit Amount",
+      "request": {
+        "method": "PUT",
+        "url": {
+          "raw": "http://localhost:8080/account/deposit/1/1000",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["account", "deposit", "1", "1000"]
+        }
+      }
+    },
+    {
+      "name": "Withdraw Amount",
+      "request": {
+        "method": "PUT",
+        "url": {
+          "raw": "http://localhost:8080/account/withdraw/1/500",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["account", "withdraw", "1", "500"]
+        }
+      }
+    },
+    {
+      "name": "Delete Account",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8080/account/delete/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["account", "delete", "1"]
+        }
+      }
+    }
+  ]
+}
